@@ -1,0 +1,17 @@
+com\example\blockchain\service\DifficultyService.class
+com\example\blockchain\model\Block.class
+com\example\blockchain\consensus\ProofOfWork.class
+com\example\blockchain\consensus\ProofOfHistory.class
+com\example\blockchain\service\ValidationService.class
+com\example\blockchain\consensus\Consensus.class
+com\example\blockchain\service\TargetService.class
+com\example\blockchain\service\PoHVDFService.class
+com\example\blockchain\consensus\ProofOfStake.class
+com\example\blockchain\model\BlockChain.class
+com\example\blockchain\service\HashService.class
+com\example\blockchain\BlockchainExampleApplication.class
+com\example\blockchain\model\ProofOfStakeValidationStatus.class
+com\example\blockchain\model\PublicParameters.class
+com\example\blockchain\config\ConsensusRunner.class
+com\example\blockchain\model\VerificationResult.class
+com\example\blockchain\service\BlockChainValidationService.class

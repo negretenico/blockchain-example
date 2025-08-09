@@ -1,0 +1,17 @@
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\BlockchainExampleApplication.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\config\ConsensusRunner.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\consensus\Consensus.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\consensus\ProofOfHistory.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\consensus\ProofOfStake.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\consensus\ProofOfWork.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\model\Block.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\model\BlockChain.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\model\ProofOfStakeValidationStatus.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\model\PublicParameters.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\model\VerificationResult.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\BlockChainValidationService.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\DifficultyService.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\HashService.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\PoHVDFService.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\TargetService.java
+C:\Users\dakot\nico_projects\blockchain-example\src\main\java\com\example\blockchain\service\ValidationService.java
