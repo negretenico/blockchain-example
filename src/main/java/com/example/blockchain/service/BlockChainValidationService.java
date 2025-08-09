@@ -8,6 +8,9 @@ import com.example.blockchain.model.BlockChain;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Gatherers;
 
 import static java.util.stream.Gatherers.windowFixed;
@@ -20,17 +23,19 @@ public class BlockChainValidationService {
         this.hashService = hashService;
     }
 
-    public boolean validate(BlockChain blockChain){
+    public boolean validate(BlockChain blockChain,
+                            Optional<Function<List<Block>,Boolean>> validation){
+        Function<List<Block>, Boolean> defaultValidation = pair ->{
+            if(pair.size()<2){
+                return true;
+            }
+            Block previous = pair.get(0);
+            Block current = pair.get(1);
+            return current.hash().equals(hashService.computeHash(current)) &&
+                    current.previous().equals(previous.hash());
+        };
         return blockChain.getChain().stream()
                 .gather(windowFixed(2))
-                .allMatch(pair -> {
-                    if(pair.size()<2){
-                        return true;
-                    }
-                    Block previous = pair.get(0);
-                    Block current = pair.get(1);
-                    return current.hash().equals(hashService.computeHash(current)) &&
-                            current.previous().equals(previous.hash());
-                });
+                .allMatch(pair -> validation.orElse(defaultValidation).apply(pair));
     }
 }

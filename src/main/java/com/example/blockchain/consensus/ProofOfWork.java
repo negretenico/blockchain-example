@@ -28,8 +28,8 @@ public final class ProofOfWork implements Consensus {
 
         while (!hash.startsWith(target)) {
             nonce++;
-            hash = hashService.computeHash(new Block(block.index(), block.ts(), "", block.previous(), nonce));
+            hash = hashService.computeHash(block.withNonce(nonce));
         }
-        return new Block(block.index(), block.ts(), hash, block.previous(), nonce);
+        return block.withComputedHash(hash).withNonce(nonce);
     }
 }
