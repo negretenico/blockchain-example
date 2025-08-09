@@ -24,6 +24,9 @@ public class BlockChainValidationService {
         return blockChain.getChain().stream()
                 .gather(windowFixed(2))
                 .allMatch(pair -> {
+                    if(pair.size()<2){
+                        return true;
+                    }
                     Block previous = pair.get(0);
                     Block current = pair.get(1);
                     return current.hash().equals(hashService.computeHash(current)) &&
