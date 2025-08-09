@@ -19,7 +19,7 @@ public final class ProofOfWork implements Consensus {
         this.hashService=hashService;
     }
     @Override
-    public void method(Block block) {
+    public Block method(Block block) {
         int diff = difficultyService.getDifficulty();
         String target = targetService.getTarget(diff);
 
@@ -30,7 +30,6 @@ public final class ProofOfWork implements Consensus {
             nonce++;
             hash = hashService.computeHash(new Block(block.index(), block.ts(), "", block.previous(), nonce));
         }
-
-        System.out.printf("Block mined! Nonce=%d Hash=%s%n", nonce, hash);
+        return new Block(block.index(), block.ts(), hash, block.previous(), nonce);
     }
 }
