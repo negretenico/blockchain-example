@@ -8,7 +8,7 @@ import java.util.Random;
 public class DifficultyService {
     /**
      * Randomly generate the difficulty for the miners
-     * @return int
+     * @return int representing the difficult between 1 and 5
      */
     public int getDifficulty(){
         Random random = new Random();
