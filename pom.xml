@@ -53,6 +53,13 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/negretenico/blockchain-example</url>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
